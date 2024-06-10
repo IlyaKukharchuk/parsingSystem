@@ -1,6 +1,5 @@
 import requests
 import aiohttp
-import asyncio
 from bs4 import BeautifulSoup
 
 def parse_category(url):
