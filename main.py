@@ -61,11 +61,6 @@ class ParserApp(QWidget):
         self.tableWidgetSelections.cellClicked.connect(self.selection_clicked)
         self.tableWidgetSelections.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
-        # for row in range(self.tableWidgetSelections.rowCount()):
-        #     for column in range(self.tableWidgetSelections.columnCount()):
-        #         item = self.tableWidgetSelections.item(row, column)
-        #         item.setFlags(item.flags() & ~Qt.ItemIsEditable)
-
         self.tableWidgetProducts = QTableWidget()
         self.tableWidgetProducts.setColumnCount(3)
         self.tableWidgetProducts.setHorizontalHeaderLabels(["Selection ID", "Name", "Price"])
@@ -75,7 +70,7 @@ class ParserApp(QWidget):
         self.tableWidgetProducts.setEditTriggers(QTableWidget.NoEditTriggers)
         self.tableWidgetSelections.setEditTriggers(QTableWidget.NoEditTriggers)
 
-         # Включаем отображение индикатора сортировки
+        # turn on sorting
         self.tableWidgetProducts.horizontalHeader().setSortIndicatorShown(True)
         self.tableWidgetProducts.horizontalHeader().setSectionsClickable(True)
         self.tableWidgetProducts.horizontalHeader().sortIndicatorChanged.connect(self.sort_table)
