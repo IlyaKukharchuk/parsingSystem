@@ -2,6 +2,9 @@
 
 Data Parser is an application developed using PyQt5 for parsing data from a website and displaying it in a user-friendly interface.
 
+![image](https://github.com/IlyaKukharchuk/parsingSystem/assets/63457388/d4565936-d303-4529-8d33-0075aac1db8a)
+
+
 ## Description
 
 The application allows the user to select the parsing mode (normal or asynchronous), input the category URL, and then perform parsing. The retrieved data is displayed in tables, showing the selection ID, product count, and timestamp. The user can also view products associated with the selection and sorting functionalities.
