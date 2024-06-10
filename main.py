@@ -1,7 +1,6 @@
 import sys
 import asyncio
 import requests
-import math
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QPushButton, QTableWidget, QTableWidgetItem,
     QLabel, QLineEdit, QHeaderView, QHBoxLayout
