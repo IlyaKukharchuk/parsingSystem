@@ -1,6 +1,7 @@
 import sys
 import asyncio
 import requests
+import math
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QPushButton, QTableWidget, QTableWidgetItem,
     QLabel, QLineEdit, QHeaderView, QHBoxLayout
@@ -188,12 +189,12 @@ class ParserApp(QWidget):
             database.close()
 
 def get_url():
-    response = requests.get('https://life.com.by/_next/data/4-ZlKMqNBSwTq1XtzOtsI/store/smartphones.json?pageLimit=50')
+    response = requests.get('https://life.com.by/_next/data/4-ZlKMqNBSwTq1XtzOtsI/store/smartphones.json?pageLimit=50')  
     
     if response.status_code == 200:
         data = response.json()
         count_all = data['pageProps']['pageData']['countAll']
-        count_all = 10 * round(count_all/10)
+        count_all = 10 * math.ceil(count_all / 10)
         url = f"https://life.com.by/store/smartphones?pageLimit={count_all}"
         return url
     else:
