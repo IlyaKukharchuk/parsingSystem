@@ -189,7 +189,7 @@ class ParserApp(QWidget):
             database.close()
 
 def get_url():
-    response = requests.get('https://life.com.by/_next/data/4-ZlKMqNBSwTq1XtzOtsI/store/smartphones.json?pageLimit=50')  
+    response = requests.get('https://life.com.by/_next/data/obpuY29sKgi9ZnttRrYdb/store/smartphones.json?pageLimit=40')  
     
     if response.status_code == 200:
         data = response.json()
