@@ -21,7 +21,7 @@ class ParserThread(QThread):
 
     def run(self):
         try:
-            database = Database('postgres', 'postgres', 'postgres')  # For PostgreSQL (replace placeholders)
+            database = Database('postgres', 'postgres', 'postgres')  # For PostgreSQL ( replace placeholders )
             database.create_tables()
 
             if self.is_async:
